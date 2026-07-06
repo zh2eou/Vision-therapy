@@ -257,30 +257,28 @@ export default function AnaglyphTool() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="sticky top-0 z-10 shrink-0 bg-white">
-        <div className="flex flex-wrap items-center gap-4 px-4 py-3 border-b border-gray-200 text-sm">
-          <span className="font-medium">
-            Round {roundIndex + 1} / {config?.rounds}
-          </span>
-          <span className="text-gray-500">
-            Level {level} / {MAX_LEVEL}
-          </span>
-          <span className="px-2 py-0.5 rounded bg-gray-100 capitalize">{round?.mode}</span>
-          <span className="text-gray-500 tabular-nums">{remainingSec}s</span>
-          <button onClick={stop} className="ml-auto px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">
-            Stop
-          </button>
-        </div>
-
-        <div className="h-1.5 bg-gray-200">
-          <div
-            className="h-full bg-blue-500 transition-[width] duration-75"
-            style={{ width: `${remainingPct}%` }}
-          />
-        </div>
+      <div className="shrink-0 flex flex-wrap items-center gap-4 px-4 py-3 bg-white border-b border-gray-200 text-sm">
+        <span className="font-medium">
+          Round {roundIndex + 1} / {config?.rounds}
+        </span>
+        <span className="text-gray-500">
+          Level {level} / {MAX_LEVEL}
+        </span>
+        <span className="px-2 py-0.5 rounded bg-gray-100 capitalize">{round?.mode}</span>
+        <span className="text-gray-500 tabular-nums">{remainingSec}s</span>
+        <button onClick={stop} className="ml-auto px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">
+          Stop
+        </button>
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-center gap-5 overflow-hidden p-4">
+      <div className="shrink-0 h-1.5 bg-gray-200">
+        <div
+          className="h-full bg-blue-500 transition-[width] duration-75"
+          style={{ width: `${remainingPct}%` }}
+        />
+      </div>
+
+      <div className="flex-1 min-h-0 flex flex-col items-center justify-center gap-5 overflow-hidden p-4">
         <p className="text-gray-600 text-center">{instruction}</p>
         {round && (
           <AnaglyphBoard
