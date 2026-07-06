@@ -56,7 +56,7 @@ export default function App() {
           {TOOLS.find((t) => t.id === tool)?.title}
         </span>
       </div>
-      <div className="flex-1 min-h-0 overflow-auto">
+      <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden">
         {tool === "coc" && <CircleOfConcentration />}
         {tool === "anaglyph" && <AnaglyphTool />}
       </div>
