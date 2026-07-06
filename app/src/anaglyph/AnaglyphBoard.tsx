@@ -27,8 +27,8 @@ export function AnaglyphBoard({ round, disabled, feedback, onSelect }: Props) {
     <div
       className="relative rounded-xl shadow-inner"
       style={{
-        width: "min(70vh, 90vw)",
-        height: "min(70vh, 90vw)",
+        width: "min(60vh, 82vw)",
+        height: "min(60vh, 82vw)",
         background: "#050505",
         border: "1px solid #222",
       }}
